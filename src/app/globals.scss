@@ -42,18 +42,24 @@
 }
 
 .rotate {
-    position: absolute;
-    top: 20px;
-    animation: spin 15s linear infinite;
+    position: relative;
+    top: -200px;
+    animation: spin 5s ease-in-out infinite;
 }
 
 @keyframes spin {
     0% {
         transform: rotate(0);
-        scale: .1
+        scale: .2
+    }
+
+    50% {
+        scale: .3;
+        transform: rotate(180deg);
     }
 
     100% {
-        transform: rotate(360deg);
+        scale: .2;
+        transform: rotate(-180deg);
     }
 }
