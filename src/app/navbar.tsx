@@ -2,7 +2,6 @@
 'use client'
 
 import React, { useState, useRef } from 'react';
-import { useSpring, config, animated } from 'react-spring';
 
 import Link from 'next/link';
 import CrunchatizeMeCapn from './_components/crunchatize/crunchatize';
@@ -10,24 +9,6 @@ import CrunchatizeMeCapn from './_components/crunchatize/crunchatize';
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false)
 
-    const [styles, api] = useSpring(() => ({
-        from: {
-            opacity: 1,
-            height: 10
-        },
-    }));
-
-    const handleOnClick = () => {
-        setIsOpen(!isOpen)
-        api.start(
-            {
-                to: {
-                    opacity: !isOpen ? 1 : 0,
-                    height: !isOpen ? 100 : 30
-                }
-            }
-        )
-    }
     return (
         <>
             <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -106,13 +87,14 @@ export default function NavBar() {
 
 
                     <span role="button" className={isOpen ? "navbar-burger is-active" : "navbar-burger"} aria-label="menu" aria-expanded="false"
-                        data-target="navbarBasicExample" onClick={handleOnClick}>
+                        data-target="navbarBasicExample" onClick={() => setIsOpen(!isOpen)}>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                     </span>
                 </div>
+
 
                 <div id="navbarBasicExample" className={isOpen ? "navbar-menu is-active" : "navbar-menu"}  >
                     <div className="navbar-start" >
