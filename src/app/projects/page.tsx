@@ -39,26 +39,30 @@ export default function Projects() {
                         <span>{`This silly lil website. It started from the compliment generator I built years ago using
                             create-react-app because I wanted to play with Cloudflare workers. Then I got laid
                             off a few weeks ago (in May 2024) and spent a couple days making this website to reorient myself with React after working with Angular
-                            for a year. It\'s still pretty basic, but keep coming back for new updates!`}
+                            for a year. I then migrated from create-react-app to next.js and switched from js to typescript. Most of the feautures on this site will be 
+                            animation and graphics based. I have a few older projects that I'm refactoring and will add code snippets here as I work on them.`}
                         </span>
+                        <ul>
+                            <li>
+                                {`Mood-based theme picker`}
+                            </li>
+                            <li>{`Flickering stars animation with js and css`}</li>
+                            <li>{`Pure CSS art`}</li>
+                            <li>
+                                {`More fun animations with React Spring, playing with three.js`}
+                            </li>
+                            <li>
+                                {`More accessibility features (large text options, screen reader friendly)`}
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        Mood-based theme picker
+                        {`I want to play with React Native so I'm working on building a simple reference app for the industry my sister works in.`}
                     </li>
                     <li>
-                        silly pure css things (like a famous painting entirely of css)
-                    </li>
-                    <li>
-                        rewriting this site with next.js (and typescript because I prefer it)
-                    </li>
-                    <li>
-                        adding more fun animations with React Spring, playing with three.js
-                    </li>
-                    <li>
-                        More accessibility features (large text options, screeen reader friendly)
+                        {`A gym-buddy finder for the Salt Lake area.`}
                     </li>
                 </ul>
-
             </div >
 
         </>
