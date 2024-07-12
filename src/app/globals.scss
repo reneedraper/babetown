@@ -1,1 +1,59 @@
 @import '../../stylesheet.scss';
+
+.pretty-border-black {
+    border: 2px solid black;
+    border-radius: .75rem;
+}
+
+.is-max-width-500 {
+    max-width: 500px;
+}
+
+.rainbow-background {
+    background: linear-gradient(90deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    animation: animatedgradient 20s linear alternate infinite;
+    height: 100vh;
+    background-size: 400% 400%;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.is-size-0 {
+    font-size: 4rem;
+}
+
+.main-height {
+    height: calc(100vh - 60px);
+    overflow: scroll
+}
+
+.rotate {
+    position: absolute;
+    top: 20px;
+    animation: spin 15s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+        scale: .1
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
