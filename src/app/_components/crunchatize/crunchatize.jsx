@@ -66,7 +66,7 @@ export default function CrunchatizeMeCapn() {
 
    return (
       <>
-         <button className="button is-primary" onMouseDown={startChompin}>Crunchatize Me Cap'n!</button>
+         <button className="button is-primary" onMouseDown={startChompin}>{`Crunchatize Me Cap\'n`}!</button>
 
          {isChompin &&
             <div id="crunchatize" className="modal is-active" onMouseDown={cancelChompin} >

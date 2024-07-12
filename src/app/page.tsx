@@ -4,8 +4,8 @@ export default function Home() {
     < >
       <div className="box">
         <header className="title is-size-0 is-size-1-mobile">WELCOME!</header>
-        <p className="subtitle is-size-3 is-size-4-mobile has-text-color-dark-gray mb-3">I'M SO GLAD YOU'RE HERE</p>
-        <p className="is-size-5 mt-5">Congratulations! You've found the best place on the internet.
+        <p className="subtitle is-size-3 is-size-4-mobile has-text-color-dark-gray mb-3">{`I\'M SO GLAD YOU\'RE HERE`}</p>
+        <p className="is-size-5 mt-5">{`Congratulations! You\'ve found the best place on the internet.`}
           <svg className="svg-shapes color shape1 rotate" width="85" height="85" viewBox="0 0 194 194" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M192 83.0024H131.162L174.181 39.9832L154.17 19.972L111.151 62.9912V2H82.8494V62.9912L39.8302 19.972L19.819 39.9832L62.8382 83.0024H2V111.304H62.8382L19.819 154.323L39.8302 174.334L82.8494 131.315V192H111.151V131.315L154.17 174.334L174.181 154.323L131.162 111.304H192V83.0024Z" stroke="black" stroke-width="4" stroke-miterlimit="10"></path>
           </svg>

@@ -36,10 +36,10 @@ export default function Projects() {
                 </p>
                 <ul>
                     <li>
-                        <span>This silly lil website. It started from the compliment generator I built years ago using
+                        <span>{`This silly lil website. It started from the compliment generator I built years ago using
                             create-react-app because I wanted to play with Cloudflare workers. Then I got laid
                             off a few weeks ago (in May 2024) and spent a couple days making this website to reorient myself with React after working with Angular
-                            for a year. It's still pretty basic, but keep coming back for new updates!
+                            for a year. It\'s still pretty basic, but keep coming back for new updates!`}
                         </span>
                     </li>
                     <li>
