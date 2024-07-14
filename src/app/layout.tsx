@@ -21,7 +21,7 @@ export default function RootLayout({
         <body className="rainbow-background">
           <NavBar />
           <div className="section main-height">
-            <div className="container">
+            <div className="container is-max-desktop">
               {children}
             </div>
           </div>
