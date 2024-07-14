@@ -15,7 +15,7 @@ export default function GetCompliment() {
             <div className="columns">
                 <div className="column is-half mt-3">
                     <div className="is-max-width-500 mx-auto is-clickable" onMouseDown={handleOnMouseDown()}>
-                        <div className="box has-text-centered is-size-5 has-text-weight-semibold pt-5 mb-2 pretty-border-black" style={{ height: '140px' }}>
+                        <div className="box has-text-centered is-size-5 has-text-weight-semibold mb-2 grid is-align-items-center pretty-border-black" style={{ height: '150px' }} >
                             <p>Hello, friend! {compliment}.</p>
                         </div>
                         <div className="buttons is-centered">
