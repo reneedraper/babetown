@@ -1,7 +1,7 @@
 
 'use client'
 
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
 import Link from 'next/link';
 import CrunchatizeMeCapn from './_components/crunchatize/crunchatize';
@@ -11,7 +11,7 @@ export default function NavBar() {
 
     return (
         <>
-            <nav className="navbar" role="navigation" aria-label="main navigation">
+            <nav onBlur={() => setIsOpen(false)} className="navbar" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <span className="navbar-item">
                         <Link className="navbar-item" href="/">
