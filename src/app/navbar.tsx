@@ -11,10 +11,10 @@ export default function NavBar() {
 
     return (
         <>
-            <nav onBlur={() => setIsOpen(false)} className="navbar" role="navigation" aria-label="main navigation">
+            <nav className="navbar" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <span className="navbar-item">
-                        <Link className="navbar-item" href="/">
+                        <Link className="navbar-item" href="/" onClick={() => setIsOpen(false)} >
                             <svg width="200px" viewBox="0 0 145 170" xmlns="http://www.w3.org/2000/svg">
                                 <ellipse cx="71" cy="85" rx="33" ry="82" fill="#ffdc5c" />
                                 <g transform="translate(-40, -85) scale(1.1,1.05)">
@@ -98,13 +98,13 @@ export default function NavBar() {
 
                 <div id="navbarBasicExample" className={isOpen ? "navbar-menu is-active" : "navbar-menu"}  >
                     <div className="navbar-start" >
-                        <Link className="navbar-item" href="/">
+                        <Link className="navbar-item" href="/" onClick={() => setIsOpen(false)} >
                             Home
                         </Link>
-                        <Link className="navbar-item" href="/about">
+                        <Link className="navbar-item" href="/about" onClick={() => setIsOpen(false)} >
                             About
                         </Link>
-                        <Link className="navbar-item" href="/projects">
+                        <Link className="navbar-item" href="/projects" onClick={() => setIsOpen(false)} >
                             Projects
                         </Link>
 
