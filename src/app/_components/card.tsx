@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { useSpring, animated, config } from '@react-spring/web'
 
-export default function ExpandableCard({ title = '', content = <div></div> }) {
+export default function ExpandableCard({ title = '', content = <div></div>, backgroundClass = 'has-background-white' }) {
     const [isExpanded, setIsExpanded] = useState(false)
 
     const [cardStyles, animtateCardHeight] = useSpring(() => ({
@@ -39,7 +39,7 @@ export default function ExpandableCard({ title = '', content = <div></div> }) {
     return (
         <>
             <div className="card mb-3">
-                <animated.header className="card-header is-shadowless is-clickable has-background-danger-light" style={{ ...headerStyles }} onMouseDown={expandOrCollapse}>
+                <animated.header className="card-header is-shadowless is-clickable" style={{ ...headerStyles }} onMouseDown={expandOrCollapse}>
                     <p className="card-header-title mb-0">{title}</p>
                     <button className="card-header-icon" aria-label="more options" >
                         <span className="icon material-symbols-outlined" aria-hidden="true">
@@ -47,7 +47,7 @@ export default function ExpandableCard({ title = '', content = <div></div> }) {
                         </span>
                     </button>
                 </animated.header >
-                <div className="card-content p-0 m-0" >
+                <div className={`card-content p-0 m-0 ${backgroundClass}`} >
                     <animated.div style={{ overflow: "hidden", ...cardStyles }} >
                         {content}
                     </animated.div>
