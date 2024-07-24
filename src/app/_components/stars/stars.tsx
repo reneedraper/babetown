@@ -7,12 +7,12 @@ export default function FlickeringStars({ numberOfStars = 500 }) {
     const timing = ["ease", "ease-in-out", "ease-in", "ease-out"]
     const boxes = Array.from({ length: numberOfStars }, (_, index) => {
         const time = Math.random() * 6 + 1;
-        const starBlur = Math.random() - 0.8;
+        const starBlur = Math.random() - 0.7;
         const starColor = colors[Math.floor(Math.random() * colors.length)];
         const starTiming = timing[Math.floor(Math.random() * timing.length)];
-        const heightWidth = `${Math.ceil(Math.random() * 60) + 20}%`;
-        const bottom = `${Math.floor(Math.random() * 100)}%`;
-        const right = `${Math.floor(Math.random() * 100)}%`;
+        const heightWidth = `${Math.ceil(Math.random() * 60) + 25}%`;
+        const bottom = `${Math.floor((Math.random() * 2 - 1) * 70)}%`;
+        const right = `${Math.floor((Math.random() * 2 - 1) * 70)}%`;
 
         return (
             <div className="cell" key={index}>
