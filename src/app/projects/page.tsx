@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Card from "../_components/card";
 import GetCompliment from "../_components/compliment/compliment-generator";
 import { useState } from 'react';
+import FlickeringStars from "../_components/stars/stars";
+import Connect4WinnerChecker from "../_components/connect4checker/connect4WinnerChecker";
 
 
 export default function Projects() {
@@ -17,12 +19,12 @@ export default function Projects() {
                 <p className="subtitle is-size-4 is-size-5-mobile mb-1">
                     Code Snippets
                 </p>
-
-
                 <Card title="Leslie Knope Compliment Generator" content={GetCompliment()}>
                 </Card>
-
-
+                <Card title="Flickering Stars" content={FlickeringStars({ numberOfStars: 200 })} backgroundClass='has-background-info-dark'>
+                </Card>
+                {/* <Card title="Connect 4 Winner Checker" content={Connect4WinnerChecker()}>
+                </Card> */}
                 {/* <a aria-roledescription="button" href="https://codesandbox.io/p/sandbox/leslie-knope-compliment-generator-f7mq88?file=%2Fsrc%2FApp.tsx" target="_blank" className="button is-warning mt-3">
                     <span>Crunchatizer/Chompers Code</span>
                     <span className="icon material-symbols-outlined is-size-5">open_in_new</span>
