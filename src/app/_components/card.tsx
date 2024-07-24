@@ -7,7 +7,7 @@ export default function ExpandableCard({ title = '', content = <div></div>, back
 
     const [cardStyles, animtateCardHeight] = useSpring(() => ({
         from: {
-            maxHeight: isExpanded ? 1000 : 0
+            maxHeight: isExpanded ? 1500 : 0
         }
     }))
 
@@ -29,7 +29,7 @@ export default function ExpandableCard({ title = '', content = <div></div>, back
         })
         animtateCardHeight.start({
             to: {
-                maxHeight: !isExpanded ? 1000 : 0
+                maxHeight: !isExpanded ? 1500 : 0
             }
         })
     }
@@ -48,7 +48,7 @@ export default function ExpandableCard({ title = '', content = <div></div>, back
                     </button>
                 </animated.header >
                 <div className={`card-content p-0 m-0 ${backgroundClass}`} >
-                    <animated.div style={{ overflow: "hidden", ...cardStyles }} >
+                    <animated.div className="mx-4" style={{ overflow: "hidden", ...cardStyles }} >
                         {content}
                     </animated.div>
                 </div>

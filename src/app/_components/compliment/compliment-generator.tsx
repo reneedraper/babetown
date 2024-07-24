@@ -15,11 +15,11 @@ export default function GetCompliment() {
             <div className="columns">
                 <div className="column is-half mt-3">
                     <div className="is-max-width-500 mx-auto is-clickable" onMouseDown={handleOnMouseDown()}>
-                        <div className="box has-text-centered is-size-5 has-text-weight-semibold mb-2 grid is-align-items-center pretty-border-black" style={{ height: '150px' }} >
+                        <div className="box has-text-centered is-size-5 is-size-6-mobile has-text-weight-semibold mb-2 grid is-align-items-center pretty-border-black" style={{ height: '150px' }} >
                             <p>Hello, friend! {compliment}.</p>
                         </div>
                         <div className="buttons is-centered">
-                            <a role="button" className="mx-auto mt-5 button is-info" href="https://codesandbox.io/p/sandbox/leslie-knope-compliment-generator-f7mq88?file=%2Fsrc%2FApp.tsx" target="_blank" >
+                            <a role="button" className="mx-auto my-3 button is-info" href="https://codesandbox.io/p/sandbox/leslie-knope-compliment-generator-f7mq88?file=%2Fsrc%2FApp.tsx" target="_blank" >
                                 <span>View Code Sandbox</span>
                                 <span className="icon material-symbols-outlined is-size-5">open_in_new</span>
                             </a>
@@ -29,7 +29,7 @@ export default function GetCompliment() {
 
                 </div>
                 <div className="column">
-                    <div className="is-max-width-500 mx-auto pb-3">
+                    <div className="is-max-width-500 mx-auto py-2">
                         <figure className="image is-16by9">
                             <iframe
                                 title="Leslie Knope GIF"

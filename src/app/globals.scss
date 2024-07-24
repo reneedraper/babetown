@@ -63,3 +63,26 @@
         transform: rotate(-180deg);
     }
 }
+
+.is-visible-on-hover svg {
+    visibility: hidden;
+}
+
+.is-visible-on-hover:hover svg {
+    visibility: visible;
+    animation: bounce 3s ease infinite;
+}
+
+@keyframes bounce {
+    0% {
+        scale: 1
+    }
+
+    50% {
+        scale: .8;
+    }
+
+    100% {
+        scale: 1;
+    }
+}

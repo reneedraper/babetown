@@ -4,9 +4,9 @@
   $input-shadow: none,
   $title-family: "'Concert One',sans-serif",
   $subtitle-family: 'Bebas Neue',
-  $subtitle-weight: '400', );
+  $subtitle-weight: '400',
+  $text: black);
 @use "bulma/sass/utilities/mixins";
-
 
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
@@ -14,13 +14,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+@include mixins.desktop {}
+
 .navbar-item {
   font-display: "'Concert One',sans-serif";
   text-transform: uppercase;
   font-weight: 600;
   color: black;
-}
-
-.navbar {
-  align-items: center;
 }
