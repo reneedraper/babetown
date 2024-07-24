@@ -48,7 +48,7 @@ export default function ExpandableCard({ title = '', content = <div></div>, back
                     </button>
                 </animated.header >
                 <div className={`card-content p-0 m-0 ${backgroundClass}`} >
-                    <animated.div className="mx-4" style={{ overflow: "hidden", ...cardStyles }} >
+                    <animated.div style={{ overflow: "hidden", ...cardStyles }} >
                         {content}
                     </animated.div>
                 </div>
