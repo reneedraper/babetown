@@ -6,7 +6,7 @@ import { complimentWords } from "./words"
 export default function GetCompliment() {
     const [compliment, getKnopeCompliment] = useState('Click here for a well-deserved compliment à la Leslie Knope')
 
-    const handleOnMouseDown = () => () => {
+    const handleOnMouseDown = () => {
         getKnopeCompliment(generateCompliment())
     }
 
@@ -14,7 +14,7 @@ export default function GetCompliment() {
         <>
             <div className="columns">
                 <div className="column is-half mt-3">
-                    <div className="is-max-width-500 mx-auto is-clickable" onMouseDown={handleOnMouseDown()}>
+                    <div className="is-max-width-500 mx-auto is-clickable" onMouseDown={handleOnMouseDown}>
                         <div className="box has-text-centered is-size-5 is-size-6-mobile has-text-weight-semibold mb-2 grid is-align-items-center pretty-border-black" style={{ height: '150px' }} >
                             <p>Hello, friend! {compliment}.</p>
                         </div>
