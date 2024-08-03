@@ -1,10 +1,7 @@
 'use client'
-import React from "react"
-
-import Link from 'next/link';
+import React from "react";
 import Card from "../_components/card";
 import GetCompliment from "../_components/compliment/compliment-generator";
-import { useState } from 'react';
 import FlickeringStars from "../_components/stars/stars";
 import Connect4 from "../_components/checkers/connect4";
 
@@ -18,19 +15,17 @@ export default function Projects() {
                     Code Snippets
                 </p>
 
-                <Card title="Leslie Knope Compliment Generator" content={GetCompliment()}>
+                <Card title="Leslie Knope Compliment Generator" content={<GetCompliment />}>
                 </Card>
-                <Card title="Flickering Stars" content={FlickeringStars({ numberOfStars: 500 })} backgroundClass='has-background-info-dark'>
+                <Card title="Flickering Stars" content={<FlickeringStars />} backgroundClass='has-background-info-dark'>
                 </Card>
-                <Card title="Connect 4" content={Connect4()}>
+                <Card title="Connect 4" content={<Connect4 />}>
                 </Card>
 
                 {/* <a aria-roledescription="button" href="https://codesandbox.io/p/sandbox/leslie-knope-compliment-generator-f7mq88?file=%2Fsrc%2FApp.tsx" target="_blank" className="button is-warning mt-3">
                     <span>Crunchatizer/Chompers Code</span>
                     <span className="icon material-symbols-outlined is-size-5">open_in_new</span>
                 </a> */}
-
-
 
 
                 <p className="subtitle is-size-4 is-size-5-mobile mb-1 mt-3">

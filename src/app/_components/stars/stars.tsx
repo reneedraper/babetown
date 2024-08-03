@@ -1,17 +1,12 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './stars.scss';
 
 interface FlickeringStarsProps {
     numberOfStars?: number;
 }
 
-export default function FlickeringStars({ numberOfStars = 500 }) {
-    const [stars, setStars] = useState<JSX.Element[]>([]);
-
-    useEffect(() => {
-        setStars(generateStars());
-    }, [numberOfStars]);
+export default function FlickeringStars({ numberOfStars = 400 }) {
 
     const colors: string[] = ["white", "#FEFFD7"];
     const timing: string[] = ["ease", "ease-in-out", "ease-in", "ease-out"];
@@ -49,8 +44,8 @@ export default function FlickeringStars({ numberOfStars = 500 }) {
     };
 
     return (
-        <div className="grid is-col-min-2 is-gap-0 dark-sky-background" style={{ overflow: 'hidden' }} onMouseDown={() => setStars(generateStars())}>
-            {stars}
+        <div className="grid is-col-min-2 is-gap-0 dark-sky-background" style={{ overflow: 'hidden' }}>
+            {generateStars()}
         </div>
     );
 };
