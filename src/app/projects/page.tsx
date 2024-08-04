@@ -17,7 +17,7 @@ export default function Projects() {
 
                 <Card title="Leslie Knope Compliment Generator" content={<GetCompliment />}>
                 </Card>
-                <Card title="Flickering Stars" content={<FlickeringStars />} backgroundClass='has-background-info-dark'>
+                <Card title="Flickering Stars" content={<FlickeringStars />}>
                 </Card>
                 <Card title="Connect 4" content={<Connect4 />}>
                 </Card>
