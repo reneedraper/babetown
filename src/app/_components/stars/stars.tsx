@@ -44,9 +44,17 @@ export default function FlickeringStars({ numberOfStars = 400 }) {
     };
 
     return (
-        <div className="grid is-col-min-2 is-gap-0 dark-sky-background" style={{ overflow: 'hidden' }}>
-            {generateStars()}
-        </div>
+        <>
+            <div className="buttons is-centered">
+                <a role="button" className="mx-auto my-3 button is-info" href="https://codesandbox.io/p/sandbox/practical-framework-jql9sk" target="_blank" >
+                    <span>View Code Sandbox</span>
+                    <span className="icon material-symbols-outlined is-size-5">open_in_new</span>
+                </a>
+            </div>
+            <div className="grid is-col-min-2 is-gap-0 dark-sky-background" style={{ overflow: 'hidden' }}>
+                {generateStars()}
+            </div>
+        </>
     );
 };
 
