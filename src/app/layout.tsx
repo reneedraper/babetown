@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <html lang="en" className="theme-light">
+      <html lang="en" className="theme-light auto-overflow" >
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <body className="rainbow-background">
