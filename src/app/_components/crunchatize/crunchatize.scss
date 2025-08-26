@@ -1,12 +1,129 @@
+@mixin animate($keyframe: svg-scale-in) {
+    animation-name: $keyframe;
+}
+
+.scale-in {
+    @include animate;
+}
+
+.slide-in {
+    @include animate($keyframe: g-slide-in);
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+}
+
+.animate-mouth-into-frame {
+    animation: slide-in .5s ease-out,
+        scale-in .5s ease-out;
+}
+
+/* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+.animate-inner-mouth {
+    //   @include animate($keyframe: mouth-squash);
+    animation: mouth-squash 1s ease-out both,
+        mouth-wobble 1.3s ease-in infinite 1s;
+}
+
+// nimate-[lower-rise_1s_ease-out_both,lower-jitter_1.9s_ease-in-out_infinite_1s]">
+.animate-lower-mouth {
+    animation: lower-rise 1s ease-out both,
+        lower-jitter 1.3s ease-in infinite 1s;
+}
+
 .chompers {
-    width: '100vw' !important ;
+    position:absolute;
+    width: 100vw;
+    max-width: 800px;
+    // height: 100vh;
     max-height: none !important;
 }
-
-.top {
-    top: 0 !important;
+.modal-test {
+    margin-top: 0;
+    display: flex;
 }
 
-.bottom {
-    bottom: 0;
+// .top {
+//     top: 0 !important;
+// }
+
+// .bottom {
+//     bottom: 0;
+// }
+
+// .animate {
+//     animation: 
+//      duration: timing-function delay iteration-count;
+// }
+
+
+/* Make SVG transforms behave relative to the element's box */
+/* .svg-tbox { transform-box: fill-box; transform-origin: center; } */
+
+/* 0) Whole SVG scales in */
+@keyframes svg-scale-in {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
+
+/* 1) Root group slides in to (-100, -100) in 0.5s */
+@keyframes g-slide-in {
+    0% {
+        transform: translate(-100px, -100px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* 2) #insidemouth vertical squash 1.5s */
+@keyframes mouth-squash {
+    0% {
+        transform: scale(1, 4.5);
+    }
+
+    100% {
+        transform: scale(1, 0.8);
+    }
+}
+
+/* 2b) #insidemouth skew wobble sequence (starts at 1.5s, lasts 1.2s) */
+@keyframes mouth-wobble {
+    0%   {transform:   skewX(0deg) skewY(0deg); }
+    16%  { transform: skewX(-4deg) skewY(2deg); }
+    30%  { transform: skewX(2deg) skewY(1deg); }
+    40%  { transform: skewX(1deg) skewY(-1deg); }
+    50%  { transform: skewX(0deg) skewY(0deg); }
+    66%  { transform: skewX(-4deg) skewY(2deg); }
+    80%  { transform:  skewX(2deg) skewY(1deg); }
+    90%  { transform: skewX(1deg) skewY(-1deg); }
+    100% { transform: skewX(0deg) skewY(0deg); }
+  }
+
+  /* 3) #lower gums n teeth rise from y=900 in 1.5s */
+  @keyframes lower-rise {
+    0% { transform: translate(0,900px); }
+    100%   { transform: translate(0,0); }
+  }
+
+  /* 3b) jitter sequence (starts 1.5s, lasts 1.2s) */
+  @keyframes lower-jitter {
+    0%   { transform: translate(0,0); }
+    16%  { transform: translate(-15px,20px); }
+    30%  { transform: translate(10px,30px); }
+    40%  { transform: translate(10px,10px); }
+    50%  { transform: translate(-5px,0px); }
+    66%  { transform: translate(-15px,20px); }
+    80%  { transform: translate(10px,30px); }
+    90%  { transform: translate(10px,10px); }
+    100% { transform: translate(0px,0px); }
+  }
+
+
+/* Respect reduced motion */
