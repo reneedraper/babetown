@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { useSpring, animated, config } from '@react-spring/web'
+import { useSpring, animated } from '@react-spring/web'
 
 export default function ExpandableCard({ title = '', content = <div></div>, backgroundClass = 'has-background-white' }) {
     const [isExpanded, setIsExpanded] = useState(false)
@@ -40,8 +40,8 @@ export default function ExpandableCard({ title = '', content = <div></div>, back
         <>
             <div className="card mb-3">
                 <animated.header className="card-header is-shadowless is-clickable" style={{ ...headerStyles }} onMouseDown={expandOrCollapse}>
-                    <p className="card-header-title mb-0">{title}</p>
-                    <button className="card-header-icon" aria-label="more options" >
+                    <h1 className="card-header-title mb-0">{title}</h1>
+                    <button className="card-header-icon" aria-label="expand" >
                         <span className="icon material-symbols-outlined" aria-hidden="true">
                             keyboard_arrow_down
                         </span>
