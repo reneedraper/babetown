@@ -1,3 +1,5 @@
+// import Confetti from './_components/confetti/confetto'
+
 export default function Home() {
 
   const Rainbow = () => {
@@ -22,6 +24,7 @@ export default function Home() {
         </p>
       </div>
       <div className="is-max-width-800" style={{ position: "sticky" }}>
+        {/* <Confetti /> */}
         <Rainbow />
       </div>
     </>)

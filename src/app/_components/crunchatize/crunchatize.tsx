@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './crunchatize.scss';
 
 import { InsideMouth, LowerGums, LowerTeeth, UpperGums, UpperTeeth } from './mouthParts'
@@ -24,7 +24,6 @@ export default function CrunchatizeMeCapn() {
    return (
       <>
          <button className="button is-primary" onMouseDown={startChompin} onKeyDown={cancelChompinB}>{`Crunchatize Me Cap\'n`}!</button>
-
          {isChompin &&
             <div id="crunchatize" className="modal is-active is-justify-content-flex-start" onClick={cancelChompin} >
                <svg className="chompers animate-mouth-into-frame" id="chomp chomp" viewBox="0 0 476.68 271.168" overflow="visible" enableBackground="new 0 0 476.68 271.168">
@@ -38,7 +37,6 @@ export default function CrunchatizeMeCapn() {
 
                   </g>
                   <UpperTeeth />
-
                </svg>
             </div>}
 
