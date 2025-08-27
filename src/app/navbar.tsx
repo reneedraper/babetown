@@ -104,10 +104,9 @@ export default function NavBar() {
                         <Link className="navbar-item" href="/about" onClick={() => setIsOpen(false)} >
                             About
                         </Link>
-                        <Link className="navbar-item" href="/projects" onClick={() => setIsOpen(false)} >
-                            Projects
+                        <Link className="navbar-item" href="/code-snippets" onClick={() => setIsOpen(false)} >
+                            Code Snippets
                         </Link>
-
                     </div>
 
                     <div className="navbar-end">
