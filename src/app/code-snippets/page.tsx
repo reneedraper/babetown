@@ -4,7 +4,7 @@ import Card from "../_components/expandable-card/expandable-card";
 
 const GetCompliment = lazy(() => import("../_components/compliment/compliment-generator"));
 const FlickeringStars = lazy(() => import("../_components/stars/stars"));
-const Connect4 = lazy(() => import("../_components/checkers/connect4"));
+const Connect4 = lazy(() => import("../_components/connect-4/connect4"));
 
 
 export default function CodeSnippets() {
