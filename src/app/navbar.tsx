@@ -83,16 +83,16 @@ export default function NavBar() {
 
                             </svg>
                         </Link>
-                    </span>
+                    </span> 
 
 
-                    <span role="button" className={isOpen ? "navbar-burger is-active" : "navbar-burger"} aria-label="menu" aria-expanded="false"
+                    <button type="button" className={isOpen ? "navbar-burger is-active" : "navbar-burger"} aria-label="menu" aria-expanded="false"
                         data-target="navbarBasicExample" onClick={() => setIsOpen(!isOpen)}>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
-                    </span>
+                    </button>
                 </div>
 
 
